@@ -1,0 +1,772 @@
+/*CSS appears when device max width 570px */
+
+@media only screen and (max-width: 570px) {
+    /*common css*/
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    /*banner css*/
+    .banner {
+        background: url(../img/banner_image.png) no-repeat;
+        background-size: cover;
+    }
+    .banner-image {
+        display: none;
+    }
+    .banner-title {
+        text-align: center;
+    }
+    .banner-title p {
+        font-size: 43px;
+    }
+    .banner-designation {
+        text-align: center;
+    }
+    .banner-button {
+        text-align: center;
+        padding-bottom: 60px;
+    }
+    .banner-contact-social {
+        display: none;
+    }
+    /*about css*/
+    .about-title {
+        padding: 50px 0 40px 0;
+    }
+    .tab-label {
+        font-size: 10px;
+    }
+    .about-short-info-desc p {
+        font-size: 15px;
+        padding: 0 0 30px 0;
+    }
+    .about-short-info-details ul {
+        padding-left: 2px;
+    }
+    .about-short-info-details ul li {
+        font-size: 13px;
+    }
+    .about-download-button {
+        padding-left: 0;
+        padding-top: 18px;
+    }
+    .about-download-button a {
+        padding: 10px 20px;
+        font-size: 10px;
+    }
+    .about-hire-button {
+        padding-left: 15px;
+        padding-top: 18px;
+    }
+    .about-hire-button a {
+        padding: 10px 20px;
+        font-size: 10px;
+    }
+    .introduction-image {
+        display: none;
+    }
+    .about {
+        padding-bottom: 10px;
+    }
+    /*slider css*/
+    .slider {
+        display: none;
+    }
+    /*services css*/
+    .services-title {
+        padding: 50px 0 40px 0;
+    }
+    .services {
+        padding-bottom: 10px;
+    }
+    /*single services css*/
+    .single-app-services-title {
+        padding-top: 220px;
+        margin: 0 auto;
+    }
+    .single-app-services-title p {
+        font-size: 25px;
+    }
+    .single-app-services-hire-button {
+        padding-left: 0;
+        padding-top: 18px;
+    }
+    .single-app-services-hire-button a {
+        padding: 10px 20px;
+        font-size: 10px;
+    }
+    .single-app-services-portfolio-button {
+        padding-left: 15px;
+        padding-top: 18px;
+    }
+    .single-app-services-portfolio-button a {
+        padding: 10px 20px;
+        font-size: 10px;
+    }
+    .single-app-services-image img {
+        padding: 10px 64px 30px 0;
+    }
+    /*portfolio*/
+    .portfolio {
+        padding-bottom: 10px;
+    }
+    .portfolio-title {
+        padding: 50px 0 0 0;
+    }
+    .tabs {
+        display: none;
+    }
+    /*single services css*/
+    .single-design-services-hire-button {
+        padding-left: 0;
+        padding-top: 18px;
+        padding-bottom: 0;
+    }
+    .single-design-services-hire-button a {
+        padding: 10px 20px;
+        font-size: 10px;
+    }
+    .single-design-services-portfolio-button {
+        padding-left: 15px;
+        padding-bottom: 0;
+        padding-top: 18px;
+    }
+    .single-design-services-portfolio-button a {
+        padding: 10px 20px;
+        font-size: 10px;
+    }
+    .single-design-services-image {
+        padding: 0;
+    }
+    .single-design-services-image img {
+        padding: 30px 15px 50px 0;
+        ;
+    }
+    .single-design-services-title {
+        padding-top: 220px;
+        text-align: center;
+    }
+    .single-design-services-title p {
+        font-size: 20px;
+    }
+    /*blog*/
+    .blog {
+        padding-bottom: 10px;
+    }
+    .blog-title {
+        padding: 50px 0 5px 0;
+    }
+    .blog-desc-title {
+        padding: 0px 0 5px 0;
+    }
+    .blog-desc-title p {
+        font-size: 13px;
+    }
+    .blog-card-desc {
+        padding: 3px 4px 12px 9px;
+    }
+    .blog-publication-details {
+        padding-left: 0px;
+    }
+    /*single services css*/
+    .single-freelancer-services-hire-button {
+        padding-left: 0;
+        padding-top: 18px;
+        padding-bottom: 0;
+    }
+    .single-freelancer-services-hire-button a {
+        padding: 10px 20px;
+        font-size: 10px;
+    }
+    .single-freelancer-services-portfolio-button {
+        padding-left: 15px;
+        padding-bottom: 0;
+        padding-top: 18px;
+    }
+    .single-freelancer-services-portfolio-button a {
+        padding: 10px 20px;
+        font-size: 10px;
+    }
+    .single-freelancer-services-image {
+        padding: 0;
+    }
+    .single-freelancer-services-image img {
+        padding: 30px 15px 50px 0;
+        ;
+    }
+    .single-freelancer-services-title {
+        padding-top: 220px;
+        text-align: center;
+    }
+    .single-freelancer-services-title p {
+        font-size: 20px;
+    }
+    /*testimonial*/
+    .testimonial {
+        padding-bottom: 10px;
+    }
+    .testimonial-title {
+        padding: 50px 0 5px 0;
+    }
+    .testimonial-card {
+        padding: 10px 5px 10px 5px;
+        margin-bottom: 110px;
+    }
+    .testimonial-desc-card {
+        height: 185px;
+    }
+    .testimonial-desc-card .testimonial-description {
+        text-align: justify;
+        font-size: 14px;
+    }
+    .price-btn img {
+        top: 65%;
+    }
+    /*our details*/
+    .our-details-package {
+        margin: 0 0 50px 0;
+    }
+    .details-responsive {
+        margin-top: 290px;
+    }
+    /*contact*/
+    .contact {
+        padding-bottom: 10px;
+    }
+    .contact-title {
+        padding: 50px 0 5px 0;
+    }
+    /*subscribe*/
+    .subscribe-title {
+        text-align: center;
+        padding-top: 183px;
+        padding-bottom: 20px;
+    }
+    .subscribe-title p {
+        font-size: 20px;
+    }
+    .subscribe-image {
+        padding: 77px 0 90px 0px;
+    }
+    /*client*/
+    .client-image {
+        padding-bottom: 25px;
+    }
+    .client-card {
+        padding: 35px 0 60px 0;
+    }
+    .client-relation-image img {
+        top: 83%;
+    }
+    /*footer*/
+    .footer-hr {
+        width: 100%;
+        border: 1px solid #96afc3;
+    }
+    .footer-contact-title {
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+    .footer-contact-street {
+        text-align: center;
+    }
+    .footer-contact-phone {
+        text-align: center;
+    }
+    .footer-contact-mail {
+        text-align: center;
+    }
+    .footer-contact-social {
+        margin: 0 auto;
+        padding-top: 46px;
+    }
+    .footer-links-title {
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+    .footer-links {
+        margin: 0 auto;
+    }
+    .footer-links ul {
+        padding-left: 0;
+    }
+    .footer-gallery-title {
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+    .footer-logo {
+        padding: 20px 0 10px 0;
+        text-align: center;
+    }
+    .footer-copyright {
+        padding: 10px 0 10px 0;
+        text-align: center;
+    }
+    .footer-credit {
+        padding: 10px 0 10px 0;
+        text-align: center;
+    }
+}
+
+
+/*CSS appears when device min-width 571px and max width 767px */
+
+@media only screen and (min-device-width: 571px) and (max-device-width: 767px) {
+    /*common css*/
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    /*banner css*/
+    .banner {
+        background: url(../img/banner_image.png) no-repeat;
+        background-size: cover;
+    }
+    .banner-image {
+        display: none;
+    }
+    .banner-title {
+        text-align: center;
+    }
+    .banner-title p {
+        font-size: 43px;
+    }
+    .banner-designation {
+        text-align: center;
+    }
+    .banner-button {
+        text-align: center;
+        padding-bottom: 60px;
+    }
+    .banner-contact-social {
+        display: none;
+    }
+    /*about css*/
+    .about-title {
+        padding: 50px 0 40px 0;
+    }
+    .tab-label {
+        font-size: 15px;
+    }
+    .about-short-info-desc p {
+        font-size: 15px;
+        padding: 0 0 30px 0;
+    }
+    .about-short-info-details ul {
+        padding-left: 2px;
+    }
+    .about-short-info-details ul li {
+        font-size: 13px;
+    }
+    .about-download-button {
+        padding-left: 0;
+        padding-top: 18px;
+    }
+    .about-download-button a {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    .about-hire-button {
+        padding-left: 15px;
+        padding-top: 18px;
+    }
+    .about-hire-button a {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    .introduction-image {
+        display: none;
+    }
+    .about {
+        padding-bottom: 10px;
+    }
+    /*slider css*/
+    .slider {
+        display: none;
+    }
+    /*services css*/
+    .services-title {
+        padding: 50px 0 40px 0;
+    }
+    .services {
+        padding-bottom: 10px;
+    }
+    /*single services css*/
+    .single-app-services-title {
+        padding-top: 220px;
+        margin: 0 auto;
+    }
+    .single-app-services-title p {
+        font-size: 35px;
+    }
+    .single-app-services-hire-button {
+        padding-left: 0;
+        padding-top: 18px;
+    }
+    .single-app-services-hire-button a {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    .single-app-services-portfolio-button {
+        padding-left: 15px;
+        padding-top: 18px;
+    }
+    .single-app-services-portfolio-button a {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    .single-app-services-image img {
+        padding: 10px 115px 50px 0;
+    }
+    /*portfolio*/
+    .portfolio {
+        padding-bottom: 10px;
+    }
+    .portfolio-title {
+        padding: 50px 0 0 0;
+    }
+    .tabs {
+        display: none;
+    }
+    /*single services css*/
+    .single-design-services-hire-button {
+        padding-left: 0;
+        padding-top: 18px;
+        padding-bottom: 0;
+    }
+    .single-design-services-hire-button a {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    .single-design-services-portfolio-button {
+        padding-left: 15px;
+        padding-bottom: 0;
+        padding-top: 18px;
+    }
+    .single-design-services-portfolio-button a {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    .single-design-services-image {
+        padding: 0;
+    }
+    .single-design-services-image img {
+        padding: 30px 15px 50px 15px;
+    }
+    .single-design-services-title {
+        padding-top: 220px;
+        margin: 0 auto;
+    }
+    .single-design-services-title p {
+        font-size: 35px;
+    }
+    /*blog*/
+    .blog {
+        padding-bottom: 10px;
+    }
+    .blog-title {
+        padding: 50px 0 5px 0;
+    }
+    .blog-desc-title {
+        padding: 0px 0 5px 0;
+    }
+    .blog-desc-title p {
+        font-size: 25px;
+    }
+    .blog-card-desc {
+        padding: 3px 4px 12px 9px;
+    }
+    .blog-publication-details {
+        padding-left: 7px;
+    }
+    .blog-category-button {
+        padding: 10px 0px 10px 8px;
+    }
+    /*single services css*/
+    .single-freelancer-services-hire-button {
+        padding-left: 0;
+        padding-top: 18px;
+        padding-bottom: 0;
+    }
+    .single-freelancer-services-hire-button a {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    .single-freelancer-services-portfolio-button {
+        padding-left: 15px;
+        padding-bottom: 0;
+        padding-top: 18px;
+    }
+    .single-freelancer-services-portfolio-button a {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    .single-freelancer-services-image {
+        padding: 0;
+    }
+    .single-freelancer-services-image img {
+        padding: 30px 15px 50px 0;
+        ;
+    }
+    .single-freelancer-services-title {
+        padding-top: 220px;
+        margin: 0 auto;
+    }
+    .single-freelancer-services-title p {
+        font-size: 35px;
+    }
+    /*testimonial*/
+    .testimonial {
+        padding-bottom: 10px;
+    }
+    .testimonial-title {
+        padding: 50px 0 5px 0;
+    }
+    .testimonial-card {
+        padding: 10px 5px 10px 5px;
+        margin-bottom: 110px;
+    }
+    .testimonial-desc-card {
+        height: 290px;
+    }
+    .testimonial-desc-card .testimonial-description {
+        text-align: justify;
+        font-size: 14px;
+    }
+    .price-btn img {
+        top: 72%;
+    }
+    /*our details*/
+    .our-details-package {
+        margin: 0 0 50px 0;
+    }
+    .details-responsive {
+        margin-top: 290px;
+    }
+    /*contact*/
+    .contact {
+        padding-bottom: 10px;
+    }
+    .contact-title {
+        padding: 50px 0 5px 0;
+    }
+    /*subscribe*/
+    .subscribe-title {
+        text-align: center;
+        padding-top: 183px;
+        padding-bottom: 20px;
+    }
+    .subscribe-title p {
+        font-size: 35px;
+    }
+    .subscribe-image {
+        padding: 77px 0 90px 0px;
+    }
+    /*client*/
+    .client-image {
+        padding-bottom: 25px;
+    }
+    .client-card {
+        padding: 35px 0 60px 0;
+    }
+    .client-relation-image img {
+        top: 83%;
+    }
+    /*footer*/
+    .footer-hr {
+        width: 100%;
+        border: 1px solid #96afc3;
+    }
+    .footer-contact-title {
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+    .footer-contact-street {
+        text-align: center;
+    }
+    .footer-contact-phone {
+        text-align: center;
+    }
+    .footer-contact-mail {
+        text-align: center;
+    }
+    .footer-contact-social {
+        margin: 0 auto;
+        padding-top: 46px;
+    }
+    .footer-links-title {
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+    .footer-links {
+        margin: 0 auto;
+    }
+    .footer-links ul {
+        padding-left: 0;
+    }
+    .footer-gallery-title {
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+    .footer-logo {
+        padding: 20px 0 10px 0;
+        text-align: center;
+    }
+    .footer-copyright {
+        padding: 10px 0 10px 0;
+        text-align: center;
+    }
+    .footer-credit {
+        padding: 10px 0 10px 0;
+        text-align: center;
+    }
+}
+
+
+/*CSS appears when device min-width 768px and max width 1024px */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    /*common css*/
+    .row {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    /*banner*/
+    .banner {
+        background: url(../img/banner_image.png) no-repeat center center;
+        background-size: cover;
+    }
+    .banner-image {
+        padding-top: 16px;
+        margin-left: 0px;
+    }
+    .banner-title p {
+        font-size: 52px;
+    }
+    /*about*/
+    .about-short-info-desc p {
+        padding: 0 0 30px 0px;
+    }
+    .about-short-info-details ul {
+        padding-left: 0px;
+    }
+    .about-download-button {
+        padding-left: 0px;
+        padding-top: 10px;
+    }
+    .about-download-button a {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+    .about-hire-button a {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+    .about-hire-button {
+        padding-top: 10px;
+    }
+    /*slider*/
+    .body-wrapper {
+        height: 50vh;
+    }
+    .slider-bottom-title {
+        text-align: center;
+        font-size: 40px;
+    }
+    /*services*/
+    .single-app-services-title p {
+        font-size: 35px;
+    }
+    .single-app-services-hire-button {
+        padding-bottom: 80px;
+    }
+    .single-app-services-portfolio-button {
+        padding-bottom: 80px;
+    }
+    .single-app-services-image {
+        margin-top: 110px;
+    }
+    /*services*/
+    .single-design-services-title p {
+        font-size: 35px;
+    }
+    .single-design-services-hire-button {
+        padding-top: 70px;
+        padding-bottom: 80px;
+    }
+    .single-design-services-portfolio-button {
+        padding-top: 70px;
+        padding-bottom: 80px;
+    }
+    .single-design-services-image {
+        margin-top: 110px;
+    }
+    /*services*/
+    .single-freelancer-services-title p {
+        font-size: 35px;
+    }
+    .single-freelancer-services-hire-button {
+        padding-top: 70px;
+        padding-bottom: 80px;
+    }
+    .single-freelancer-services-portfolio-button {
+        padding-top: 70px;
+        padding-bottom: 80px;
+    }
+    .single-freelancer-services-image {
+        margin-top: 110px;
+    }
+    /*testimonial*/
+    .testimonial-desc-card {
+        height: 340px;
+    }
+    .price-btn img {
+        top: 80%;
+    }
+    .testimonial-desc-card .testimonial-name {
+        font-size: 18px;
+    }
+    /*details*/
+    .our-details-title {
+        font-size: 16px;
+    }
+    /*subscribe*/
+    .subscribe-title {
+        padding-top: 181px;
+    }
+    .subscribe-title p {
+        font-size: 25px;
+    }
+    /*contact*/
+    .footer-contact-street {
+        font-size: 13px;
+    }
+    .footer-contact-street span {
+        font-size: 15px;
+    }
+    .footer-contact-phone {
+        font-size: 13px;
+    }
+    .footer-contact-phone span {
+        font-size: 15px;
+    }
+    .footer-contact-mail {
+        font-size: 13px;
+    }
+    .footer-contact-mail span {
+        font-size: 15px;
+    }
+    .footer-links ul {
+        padding-left: 0;
+    }
+    #image-gallery {
+        margin-bottom: 15px;
+    }
+}
