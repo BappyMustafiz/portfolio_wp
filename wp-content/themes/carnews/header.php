@@ -117,16 +117,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             wp_nav_menu(
                array(
                   'theme_location' => 'header_top_menu',
-                  'container_class'=> 'menu',
-                  'items_wrap'     => '<ul class="menu-links">%3$s</ul>' 
+                  'menu_class'     => 'menu-links', 
+                  'menu_id'     => 'bappy', 
+                  'container'     => '', 
+                  'fallback_cb'     => 'default_menu', 
+                  'walker'     => new WP_Bootstrap_Navwalker() 
                )
             );
          ?>
-        <!-- menu links -->
-        <ul class="menu-links">
-            <!-- active class -->
-            <li class="active"><a href="javascript:void(0)"> Home <i class="fa fa-angle-down fa-indicator"></i></a>
-                 <!-- drop down multilevel  -->
+        <!-- menu links --><!-- 
+        <ul class="menu-links"> -->
+            <!-- active class --><!-- 
+            <li class="active"><a href="javascript:void(0)"> Home <i class="fa fa-angle-down fa-indicator"></i></a> -->
+                 <!-- drop down multilevel  --><!-- 
                 <ul class="drop-down-multilevel">
                     <li class="active"><a href="index.html">Home 1</a></li>
                     <li><a href="index-2.html">Home 2</a></li>
@@ -144,13 +147,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li><a href="index-landing-page.html">landing page</a></li>
                 </ul>
             </li>
-            <li><a href="javascript:void(0)">Pages <i class="fa fa-angle-down fa-indicator"></i></a>
-                <!-- drop down full width -->
-                <div class="drop-down menu-bg grid-col-12">
-                    <!--grid row-->
-                    <div class="grid-row">
+            <li><a href="javascript:void(0)">Pages <i class="fa fa-angle-down fa-indicator"></i></a> -->
+                <!-- drop down full width --><!-- 
+                <div class="drop-down menu-bg grid-col-12"> -->
+                    <!--grid row--><!-- 
+                    <div class="grid-row"> -->
                         <!--grid column 3-->
-                        <div class="grid-col-3">
+                        <!-- <div class="grid-col-3">
                             <ul>
                               <li><a href="about-01.html">About 01</a></li>
                               <li><a href="about-02.html">About 02</a></li>
@@ -158,9 +161,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                               <li><a href="service-02.html">service 02</a></li>
                               <li><a href="career.html">career</a></li>
                             </ul>
-                        </div>
+                        </div> -->
                         <!--grid column 3-->
-                        <div class="grid-col-3">
+                       <!--  <div class="grid-col-3">
                             <ul>
                               <li><a href="team-01.html">team 01</a></li>
                               <li><a href="team-02.html">team 02</a></li>
@@ -168,9 +171,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                               <li><a href="contact-02.html">contact 02</a></li>
                               <li><a href="faq.html">faq</a></li>
                             </ul>
-                        </div>
+                        </div> -->
                         <!--grid column 3-->
-                        <div class="grid-col-3">
+                        <!-- <div class="grid-col-3">
                             <ul>
                               <li><a href="login.html">login</a></li>
                               <li><a href="register.html">register</a></li>
@@ -178,9 +181,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                               <li><a href="coming-soon.html">coming soon</a></li>
                               <li><a href="typography.html">typography</a></li>
                             </ul>
-                        </div>
+                        </div> -->
                         <!--grid column 3-->
-                        <div class="grid-col-3">
+                        <!-- <div class="grid-col-3">
                             <ul>
                               <li><a href="page-left-sidebar.html">page left sidebar </a></li>
                               <li><a href="page-right-sidebar.html">page right sidebar </a></li>
@@ -193,20 +196,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
             </li>
-            <li><a href="javascript:void(0)">blog <i class="fa fa-angle-down fa-indicator"></i></a>
+            <li><a href="javascript:void(0)">blog <i class="fa fa-angle-down fa-indicator"></i></a> -->
                 <!-- drop down multilevel  -->
-                <ul class="drop-down-multilevel">
+                <!-- <ul class="drop-down-multilevel">
                     <li><a href="javascript:void(0)">blog classic <i class="fa fa-angle-right fa-indicator"></i> </a>
                         <!-- drop down second level -->
-                        <ul class="drop-down-multilevel">
+                        <!-- <ul class="drop-down-multilevel">
                            <li><a href="blog-left-sidebar.html">left sidebar</a></li>
                            <li><a href="blog-right-sidebar.html">right sidebar</a></li>
                            <li><a href="blog-fullwidth.html">fullwidth</a></li>
                         </ul>
                     </li>
-                    <li><a href="javascript:void(0)">Masonry  <i class="fa fa-angle-right fa-indicator"></i> </a>
+                    <li><a href="javascript:void(0)">Masonry  <i class="fa fa-angle-right fa-indicator"></i> </a> -->
                       <!-- drop down second level -->
-                        <ul class="drop-down-multilevel">
+                        <!-- <ul class="drop-down-multilevel">
                             <li><a href="blog-masonry-2-collums.html"> 2 column </a> </li>
                             <li><a href="blog-masonry-3-collums.html"> 3 column </a> </li>
                             <li><a href="blog-masonry-4-collums.html"> 4 column </a> </li>
@@ -214,37 +217,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                            <li><a href="blog-masonry-right-sidebar.html">right sidebar</a></li>
                         </ul> 
                     </li>
-                    <li><a href="javascript:void(0)">blog single <i class="fa fa-angle-right fa-indicator"></i> </a>
+                    <li><a href="javascript:void(0)">blog single <i class="fa fa-angle-right fa-indicator"></i> </a> -->
                       <!-- drop down second level -->
-                        <ul class="drop-down-multilevel">
+                        <!-- <ul class="drop-down-multilevel">
                             <li><a href="blog-single-01.html">blog single 01 </a> </li>
                             <li><a href="blog-single-02.html">blog single 02 </a> </li>
                         </ul> 
                     </li>
                 </ul>
             </li>
-            <li><a href="javascript:void(0)">Car listing  <i class="fa fa-angle-down fa-indicator"></i></a> 
+            <li><a href="javascript:void(0)">Car listing  <i class="fa fa-angle-down fa-indicator"></i></a> --> 
                <!-- drop down multilevel  -->
-                <ul class="drop-down-multilevel">
+                <!-- <ul class="drop-down-multilevel">
                     <li><a href="listing-01.html">listing 01</a></li>
                     <li><a href="listing-02.html">listing 02</a></li>
                 </ul>
             </li>
-            <li><a href="javascript:void(0)">Car details  <i class="fa fa-angle-down fa-indicator"></i></a> 
+            <li><a href="javascript:void(0)">Car details  <i class="fa fa-angle-down fa-indicator"></i></a>  -->
                <!-- drop down multilevel  -->
-                <ul class="drop-down-multilevel">
+               <!--  <ul class="drop-down-multilevel">
                     <li><a href="details-01.html">details 01</a></li>
                     <li><a href="details-02.html">details 02</a></li>
                 </ul>
             </li>
-            <li><a href="javascript:void(0)"> Contact <i class="fa fa-angle-down fa-indicator"></i></a>
+            <li><a href="javascript:void(0)"> Contact <i class="fa fa-angle-down fa-indicator"></i></a> -->
                  <!-- drop down multilevel  -->
-                <ul class="drop-down-multilevel right-menu">
+                <!-- <ul class="drop-down-multilevel right-menu">
                    <li><a href="contact-01.html">contact 01</a></li>
                    <li><a href="contact-02.html">contact 02</a></li>
                 </ul>
-            </li>
-            <li>
+            </li> -->
+            <!-- <li>
               <div class="search-top"> <a class="search-btn not_click d-none d-lg-block" href="javascript:void(0);">Search Button</a>
                 <div class="search-box not-click">
                   <div class="row">
@@ -321,7 +324,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                  </div>
                </div>
               </li>
-            </ul>
+            </ul> -->
            </div>
           </div>
          </div>
