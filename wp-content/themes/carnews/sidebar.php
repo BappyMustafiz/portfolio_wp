@@ -86,5 +86,53 @@
            </div>
          </div> -->
          <?php dynamic_sidebar('widget-home-one')?>
+
+
+         <div class="sidebar-widget">
+           <h6>Founder category (single category )</h6>
+            <?php  
+             $categorywisepost = new WP_Query(array(
+                'post_type' =>'post',
+                'posts_per_page' =>3,
+                'orderby' =>'title',
+                'order' =>'DESC',
+                'category_name' =>'Founder'
+             ));
+            if(have_posts()): while($categorywisepost->have_posts()): $categorywisepost->the_post();?> 
+                <div class="recent-post">
+                  <div class="recent-post-image">
+                    <?php the_post_thumbnail('', array('class' => 'my-post-thumb'));?>
+                  </div>
+                  <div class="recent-post-info">
+                     <a href="<?php the_permalink();?>"><?php the_title(); ?></a>
+                    <span><i class="fa fa-calendar"></i> <?php the_time('M d, Y');?></span>
+                   </div>
+                </div>
+              <?php endwhile;?>
+              <?php endif;?>
+         </div>
+
+         <div class="sidebar-widget">
+           <h6>Random Post</h6>
+            <?php  
+             $randompost = new WP_Query(array(
+                'post_type' =>'post',
+                'posts_per_page' =>4,
+                'orderby' =>'rand',
+                'order' =>'DESC'
+             ));
+            if(have_posts()): while($randompost->have_posts()): $randompost->the_post();?> 
+                <div class="recent-post">
+                  <div class="recent-post-image">
+                    <?php the_post_thumbnail('', array('class' => 'my-post-thumb'));?>
+                  </div>
+                  <div class="recent-post-info">
+                     <a href="<?php the_permalink();?>"><?php the_title(); ?></a>
+                    <span><i class="fa fa-calendar"></i> <?php the_time('M d, Y');?></span>
+                   </div>
+                </div>
+              <?php endwhile;?>
+              <?php endif;?>
+         </div>
         </div>                       
       </div>

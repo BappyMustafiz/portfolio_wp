@@ -18,9 +18,9 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-3 col-md-6">
+      <!-- <div class="col-lg-3 col-md-6">
         <div class="about-content">
-          <img class="img-fluid" id="logo-footer" src="<?php echo get_template_directory_uri();?>/images/logo-light.png" alt="">
+          <img class="img-fluid" id="logo-footer" src="<?php //echo get_template_directory_uri();?>/images/logo-light.png" alt="">
           <p>We provide everything you need to build an amazing dealership website developed especially for car sellers dealers or auto motor retailers.</p>
         </div>
         <div class="address">
@@ -30,9 +30,9 @@
             <li> <i class="fa fa-envelope-o"></i><span>support@website.com</span> </li>
           </ul>
         </div>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <?php dynamic_sidebar('footer-widget-one')?>
+      </div> -->
+      
+        <?php dynamic_sidebar('footer-widget')?>
         <!-- <div class="usefull-link">
         <h6 class="text-white">Useful Links</h6>
           <ul>
@@ -43,7 +43,6 @@
             <li><a href="#"><i class="fa fa-angle-double-right"></i> Starter Replacement</a></li>
           </ul>
         </div> --> 
-      </div>
       <div class="col-lg-3 col-md-6">
        <div class="recent-post-block">
         <h6 class="text-white">recent posts </h6>
@@ -68,7 +67,7 @@
           ?>
        </div>
       </div>
-      <div class="col-lg-3 col-md-6">
+      <!-- <div class="col-lg-3 col-md-6">
         <div class="news-letter">
         <h6 class="text-white">subscribe Our Newsletter </h6>
          <p>Keep up on our always evolving products features and technology. Enter your e-mail and subscribe to our newsletter.</p>
@@ -77,7 +76,7 @@
            <a class="button red" href="#">Subscribe</a>
          </form>
         </div> 
-      </div>
+      </div> -->
     </div>
     <hr />
     <div class="copyright">

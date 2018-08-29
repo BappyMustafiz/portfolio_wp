@@ -44,9 +44,9 @@ add_image_size('custom-image', 500, 1170, true);
 
 function widgets_sidebar() {
     register_sidebar( array(
-        'name'          => __( 'Main Sidebar', 'carnews' ),
+        'name'          => esc_html__( 'Main Sidebar', 'carnews' ),
         'id'            => 'widget-home-one',
-        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'carnews' ),
+        'description'   => esc_html__( 'Widgets for sidebar', 'carnews' ),
         'before_widget' => '<div class="sidebar-widget"><div class="widget-link">',
 		'after_widget'  => '</div></div>',
 		'before_title'  => '<h6>',
@@ -55,13 +55,39 @@ function widgets_sidebar() {
 
     // footer widget
     register_sidebar( array(
-        'name'          => __( 'Footer Widget', 'carnews' ),
-        'id'            => 'footer-widget-one',
-        'description'   => __( 'Widgets for footer', 'carnews' ),
-        'before_widget' => '<div class="usefull-link">',
-		'after_widget'  => '</div>',
+        'name'          => esc_html__( 'Footer Widget', 'carnews' ),
+        'id'            => 'footer-widget',
+        'description'   => esc_html__( 'Widgets for footer one', 'carnews' ),
+        'before_widget' => '<div class="col-lg-3 col-md-6"><div class="usefull-link">',
+		'after_widget'  => '</div></div>',
 		'before_title'  => '<h6 class="text-white">',
 		'after_title'   => '</h6>',
 	    ) );
 }
 add_action( 'widgets_init', 'widgets_sidebar' ); 
+
+/*
+* rearrange comment field as user demand
+*/
+
+function rearrange_comment_field( $fields ) {
+$comment_field = $fields['comment'];
+unset( $fields['comment'] );
+$fields['comment'] = $comment_field;
+return $fields;
+}
+ 
+add_filter( 'comment_form_fields', 'rearrange_comment_field' );
+
+/*
+* remove any field as user demand
+*/
+
+// function remove_comment_field( $fields ) {
+// unset( $fields['comment'] );
+// unset( $fields['author'] );
+// unset( $fields['email'] );
+// return $fields;
+// }
+ 
+// add_filter( 'comment_form_fields', 'remove_comment_field' );
