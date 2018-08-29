@@ -43,6 +43,11 @@
 <!-- <link rel="stylesheet" href="#" data-style="styles" /> -->
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/css/style-customizer.css" />
 <link rel="stylesheet" href="<?php echo get_stylesheet_uri();?>">
+<?php 
+  if (is_singular() && comments_open() && get_option('thread_comments')) {
+    wp_enqueue_script('comment-reply');
+  }
+?>
 <?php wp_head();?>
 </head>
 
@@ -110,7 +115,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- menu logo -->
         <ul class="menu-logo">
             <li>
-                <a href="index.html"><img id="logo_img" src="<?php echo get_template_directory_uri();?>/images/logo-light.png" alt="logo"> </a>
+                <a href="<?php echo get_option("siteurl"); ?>"><img id="logo_img" src="<?php echo get_template_directory_uri();?>/images/logo-light.png" alt="logo"> </a>
             </li>
         </ul>
         <?php
@@ -121,17 +126,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   'menu_id'     => 'bappy', 
                   'container'     => '', 
                   'fallback_cb'     => 'default_menu', 
-                  'walker'     => new WP_Bootstrap_Navwalker() 
+                  'walker'     => new custom_walker() 
                )
             );
          ?>
-        <!-- menu links --><!-- 
-        <ul class="menu-links"> -->
-            <!-- active class --><!-- 
-            <li class="active"><a href="javascript:void(0)"> Home <i class="fa fa-angle-down fa-indicator"></i></a> -->
-                 <!-- drop down multilevel  --><!-- 
-                <ul class="drop-down-multilevel">
-                    <li class="active"><a href="index.html">Home 1</a></li>
+        <!-- menu links --> 
+        <!-- <ul class="menu-links"> -->
+            <!-- active class -->
+           <!--  <li class="active"><a href="javascript:void(0)"> Home <i class="fa fa-angle-down fa-indicator"></i></a> -->
+                 <!-- drop down multilevel  -->
+                <!-- <ul class="drop-down-multilevel">
+                    <li class="active"><a href="index.html">Home 1</a>
+                      <ul class="drop-down-multilevel">
+                        <li><a href="index-2.html">Home 2</a></li>
+                      </ul>
+                    </li>
                     <li><a href="index-2.html">Home 2</a></li>
                     <li><a href="index-3.html">Home 3</a></li>
                     <li><a href="index-4.html">Home 4</a></li>

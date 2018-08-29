@@ -40,6 +40,12 @@
     </div>
     <div class="row">
      <div class="col-md-8">
+      <div class="entry-title">
+        <a>Your keyword <span><?php _e(''); echo '&quot;'.$s.'&quot;';?></span> Results are below :</a>
+      </div>
+       
+     </div> 
+     <div class="col-md-8">
       <?php if(have_posts()) : while(have_posts()) : the_post();?>
         <div class="blog-entry">
           <div class="blog-entry-image  clearfix">
@@ -85,8 +91,7 @@
 
      </div>
      </div>
-    <?php get_sidebar();?>
-
+      <?php get_sidebar();?>
      </div>
    </div>
 </section>

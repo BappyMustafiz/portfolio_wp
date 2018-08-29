@@ -1263,7 +1263,7 @@ ul.page-breadcrumb li a:hover { color: #db2d2e; }
 .blog-sidebar .widget-search { position: relative; }
 .blog-sidebar .widget-search input { padding-right: 30px; color: #323232; height: 45px; border-color: #f6f6f6; background: #f6f6f6; transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; }
 .blog-sidebar .widget-search input:focus { background: transparent; }
-.blog-sidebar .widget-search i { position: absolute; right: 0px; padding: 16px 12px; font-size: 14px; color: #626262; cursor: pointer; }
+.blog-sidebar .widget-search button { position: absolute; right: 0px; padding: 7px 12px; font-size: 14px; color: #626262; cursor: pointer; }
 .blog-sidebar .widget-search input:focus { border-color: #db2d2e; }
 
 /*widget-link*/

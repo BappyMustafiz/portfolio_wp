@@ -13,3 +13,115 @@ Text Domain: carnews
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+.pagination-nav{
+	display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: .25rem;
+}
+.pagination-nav a{
+	color: #626262;
+	padding: 8px 16px;
+    border-color: #e3e3e3;
+    border-radius: 0px;
+	font-size: 15px;
+    font-weight: 500;
+    margin: 0 5px;
+	display: inline-block;
+	list-style: square inside;
+    line-height: 30px;
+    border: 1px solid #ddd;
+}
+.pagination-nav span{
+	padding: 8px 16px;
+    border-color: #e3e3e3;
+    border-radius: 0px;
+	font-size: 15px;
+    font-weight: 500;
+    margin: 0 5px;
+	display: inline-block;
+	list-style: square inside;
+    line-height: 30px;
+    border: 1px solid #ddd;
+    background-color: #db2d2e;
+    color: #ffffff;
+}
+
+.comment-form-comment textarea{
+    margin-bottom: 1rem;
+    overflow: auto;
+    resize: vertical;
+    width: 100%;
+    resize: vertical;
+    background: #f6f6f6;
+    border: 1px solid transparent;
+}
+.comment-form-author input{
+        margin-bottom: 1rem;
+    width: 100%;
+    resize: vertical;
+    background: #f6f6f6;
+    border: 1px solid transparent;
+    font-size: 14px;
+    border-radius: 0;
+    box-shadow: none;
+    height: auto;
+    line-height: 1.33333;
+    padding: 12px 18px;
+}
+.comment-form-email input{
+    margin-bottom: 1rem;
+    width: 100%;
+    resize: vertical;
+    background: #f6f6f6;
+    border: 1px solid transparent;
+    font-size: 14px;
+    border-radius: 0;
+    box-shadow: none;
+    height: auto;
+    line-height: 1.33333;
+    padding: 12px 18px;
+}
+.comment-form-url input{
+    margin-bottom: 1rem;
+    width: 100%;
+    resize: vertical;
+    background: #f6f6f6;
+    border: 1px solid transparent;
+    font-size: 14px;
+    border-radius: 0;
+    box-shadow: none;
+    height: auto;
+    line-height: 1.33333;
+    padding: 12px 18px;
+}
+.form-submit input{
+    display: block;
+    text-align: center;
+    border: 0px;
+    width: 100%;
+    text-align: center;
+    background: #db2d2e;
+    color: #ffffff;
+    display: inline-block;
+    text-transform: capitalize;
+    vertical-align: middle;
+    padding: 8px 20px;
+    -ms-transform: perspective(1px) translateZ(0);
+    -o-transform: perspective(1px) translateZ(0);
+    -moz-transform: perspective(1px) translateZ(0);
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+    -ms-transition-property: color;
+    -moz-transition-property: color;
+    -o-transition-property: color;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -ms-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}

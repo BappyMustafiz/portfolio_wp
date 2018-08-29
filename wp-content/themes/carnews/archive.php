@@ -33,12 +33,12 @@
       <div class="col-md-12">
          <div class="section-title">
            <span>Read what we say in our blog</span>
-           <h2>Our blog</h2>
+           <h2>Archive Post</h2>
            <div class="separator"></div>
          </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row"> 
      <div class="col-md-8">
       <?php if(have_posts()) : while(have_posts()) : the_post();?>
         <div class="blog-entry">
@@ -85,8 +85,7 @@
 
      </div>
      </div>
-    <?php get_sidebar();?>
-
+      <?php get_sidebar();?>
      </div>
    </div>
 </section>

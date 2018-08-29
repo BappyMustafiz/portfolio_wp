@@ -513,7 +513,7 @@
   width: 100%;
   background: #ffffff;
   float: left;
-  max-width: 200px;
+  max-width:100px;
 }
 .mega-menu .drop-down-multilevel * {
   color: #323232;

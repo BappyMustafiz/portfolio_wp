@@ -32,7 +32,8 @@
         </div>
       </div>
       <div class="col-lg-3 col-md-6">
-        <div class="usefull-link">
+        <?php dynamic_sidebar('footer-widget-one')?>
+        <!-- <div class="usefull-link">
         <h6 class="text-white">Useful Links</h6>
           <ul>
             <li><a href="#"><i class="fa fa-angle-double-right"></i> Change Oil and Filter</a></li>
@@ -41,38 +42,30 @@
             <li><a href="#"><i class="fa fa-angle-double-right"></i> Pre-purchase Car Inspection</a></li>
             <li><a href="#"><i class="fa fa-angle-double-right"></i> Starter Replacement</a></li>
           </ul>
-        </div> 
+        </div> --> 
       </div>
       <div class="col-lg-3 col-md-6">
        <div class="recent-post-block">
         <h6 class="text-white">recent posts </h6>
-          <div class="recent-post">
-            <div class="recent-post-image">
-              <img class="img-fluid" src="<?php echo get_template_directory_uri();?>/images/car/01.jpg" alt=""> 
-            </div>
-            <div class="recent-post-info">
-                <a href="#">Time to change your </a>
-                <span class="post-date"><i class="fa fa-calendar"></i>September 10, 2017</span>
-            </div>
-         </div>
-         <div class="recent-post">
-            <div class="recent-post-image">
-              <img class="img-fluid" src="<?php echo get_template_directory_uri();?>/images/car/02.jpg" alt=""> 
-            </div>
-            <div class="recent-post-info">
-                <a href="#">The best time to </a>
-                <span class="post-date"><i class="fa fa-calendar"></i>September 10, 2017</span>
-            </div>
-         </div>
-         <div class="recent-post">
-            <div class="recent-post-image">
-              <img class="img-fluid" src="<?php echo get_template_directory_uri();?>/images/car/03.jpg" alt=""> 
-            </div>
-            <div class="recent-post-info">
-                <a href="#">Replacing a timing </a>
-                <span class="post-date"><i class="fa fa-calendar"></i>September 10, 2017</span>
-            </div>
-         </div>
+          <?php
+            global $post;
+            $args = array( 'posts_per_page' => 3, 'order'=> 'DESC', 'orderby' => 'post_date' );
+            $postslist = get_posts( $args );
+            foreach ( $postslist as $post ) :
+              setup_postdata( $post ); ?> 
+              <div class="recent-post">
+                <div class="recent-post-image">
+                  <?php the_post_thumbnail('', array('class' => 'my-post-thumb'));?>
+                </div>
+                <div class="recent-post-info">
+                   <a href="<?php the_permalink();?>"><?php the_title(); ?></a>
+                  <span><i class="fa fa-calendar"></i> <?php the_time('M d, Y');?></span>
+                 </div>
+              </div>
+            <?php
+            endforeach; 
+            wp_reset_postdata();
+          ?>
        </div>
       </div>
       <div class="col-lg-3 col-md-6">
