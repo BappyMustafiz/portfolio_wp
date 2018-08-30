@@ -97,7 +97,7 @@ label { font-size: 15px; font-weight: 400; color: #626262; }
 ****************************/
 mark { background: #db2d2e; color: #ffffff; }
 ol { padding: 0px; margin: 0px; }
-ol li { list-style: decimal inside; padding: 0px; margin: 0px; line-height: 30px; }
+ol li { list-style: decimal inside;    list-style-type: none; padding: 0px; margin: 0px; line-height: 30px; }
 ol.alpha li { list-style: decimal-leading-zero inside; padding: 0px; margin: 0px; }
 ol.roman { padding-left: 15px; }
 ol.roman li { list-style: lower-roman; padding: 0px; margin: 0px; }

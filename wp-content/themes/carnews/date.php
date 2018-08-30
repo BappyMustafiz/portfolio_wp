@@ -1,13 +1,10 @@
 <?php get_header();?>
 
-<!--=================================
- inner-intro  -->
- 
  <section class="inner-intro bg-1 bg-overlay-black-70">
   <div class="container">
      <div class="row text-center intro-title">
            <div class="col-md-6 text-md-left d-inline-block">
-             <h1 class="text-white">Tag </h1>
+             <h1 class="text-white">date </h1>
            </div>
            <div class="col-md-6 text-md-right float-right">
              <ul class="page-breadcrumb">
@@ -20,16 +17,9 @@
   </div>
 </section>
 
-<!--=================================
- inner-intro  -->
-
-
-<!--=================================
- blog  -->
-
 <section class="blog blog-right-sidebar page-section-ptb">
   <div class="container">
-    <div class="row"> 
+    <div class="row">
      <div class="col-md-8">
       <?php if(have_posts()) : while(have_posts()) : the_post();?>
         <div class="blog-entry">
@@ -76,8 +66,10 @@
 
      </div>
      </div>
-      <?php get_sidebar();?>
+    <?php get_sidebar();?>
+
      </div>
    </div>
 </section>
+
 <?php get_footer();?>

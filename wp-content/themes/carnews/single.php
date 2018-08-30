@@ -115,6 +115,43 @@
                   }
                   ?>
             </div>
+            <hr class="gray">
+            <div class="row team-2">
+              <div class="col-lg-12 col-md-12">
+                <div class="row team-info">
+                  <div class="col-md-2">
+                    <div class="team-image"> 
+                    <?php echo get_avatar( get_the_author_meta('ID'), $size, $default, $alt, $args ); ?>  
+                    </div>
+                  </div>
+                  <div class="col-md-10">
+                    <div class="team-2 text-left">
+                      <div class="team-info">
+                       <div class="team-name">
+                        <span>Author</span>
+                        <h5><?php the_author_posts_link();?></h5>
+                        <p class="text-danger">All post: <?php echo get_the_author_posts();?></p>
+                        <p><?php the_author_meta('description');?></p>
+                       </div>
+                       <div class="entry-share clearfix">
+                          <a class="button red float-left" href="#!"> Author all post </a>
+                       </div>
+                       <div class="team-social"> 
+                           <ul>
+                            <li><a class="icon-1" href="<?php the_author_meta('facebook');?>"><i class="fa fa-facebook"></i></a></li>
+                            <li><a class="icon-2" href="<?php the_author_meta('skype');?>"><i class="fa fa-skype"></i></a></li>
+                            <li><a class="icon-3" href="<?php the_author_meta('instagram');?>"><i class="fa fa-instagram"></i></a></li>
+                            <li><a class="icon-4" href="<?php the_author_meta('linkedin');?>"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a class="icon-4" href="<?php the_author_meta('twitter');?>"><i class="fa fa-twitter"></i></a></li>
+                          </ul>
+                       </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="gray">
             <div class="blog-form">
                <?php comments_template('', true); ?>
             </div>

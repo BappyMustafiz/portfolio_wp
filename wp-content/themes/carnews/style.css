@@ -335,3 +335,8 @@ textarea#comment {
 .top-search .top-widget-search input:focus { background: transparent; }
 .top-search .top-widget-search button { position: absolute; right: 0px; padding: 8px 12px; font-size: 14px; color: #626262; cursor: pointer; }
 .top-search .top-widget-search input:focus { border-color: #db2d2e; }
+
+.product-listing .car-grid {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
