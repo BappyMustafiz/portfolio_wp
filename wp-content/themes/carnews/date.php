@@ -4,13 +4,11 @@
   <div class="container">
      <div class="row text-center intro-title">
            <div class="col-md-6 text-md-left d-inline-block">
-             <h1 class="text-white">date </h1>
+             <h1 class="text-white">Date </h1>
            </div>
            <div class="col-md-6 text-md-right float-right">
              <ul class="page-breadcrumb">
-                <li><a href="#"><i class="fa fa-home"></i> Home</a> <i class="fa fa-angle-double-right"></i></li>
-                <li><a href="#">pages</a> <i class="fa fa-angle-double-right"></i></li>
-                <li><span>blog right sidebar </span> </li>
+                <li><a href="<?php echo esc_url(home_url('/')); ?>"><i class="fa fa-home"></i> Home</a></li>
              </ul>
            </div>
      </div>

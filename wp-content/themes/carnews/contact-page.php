@@ -8,22 +8,7 @@
 ?>
 <!--=================================
  banner -->
- <section class="inner-intro bg-1 bg-overlay-black-70">
-  <div class="container">
-     <div class="row text-center intro-title">
-           <div class="col-md-6 text-md-left d-inline-block">
-             <h1 class="text-white"><?php the_title();?></h1>
-           </div>
-           <div class="col-md-6 text-md-right float-right">
-             <ul class="page-breadcrumb">
-                <li><a href="<?php the_permalink();?>"><i class="fa fa-home"></i> <?php the_title();?></a> <!-- <i class="fa fa-angle-double-right"></i> --></li>
-                <!-- <li><a href="#">pages</a> <i class="fa fa-angle-double-right"></i></li>
-                <li><span>page</span> </li> -->
-             </ul>
-           </div>
-     </div>
-  </div>
-</section>
+<?php get_template_part('banner-breadcumb');?>
 
 <!--=================================
  banner -->
@@ -74,40 +59,12 @@
     </div>
     <div class="page-section-ptb">
       <div class="row">
-       <div class="col-lg-8 col-sm-12">
-       <div class="gray-form">
-         <div id="formmessage">Success/Error Message Goes Here</div>
-           <form class="form-horizontal" id="contactform" role="form" method="post" action="http://themes.potenzaglobalsolutions.com/html/cardealer/php/contact-form.php">
-            <div class="contact-form row">
-              <div class="col-lg-4 col-sm-12">
-               <div class="form-group">
-                 <input id="name" type="text" placeholder="Name*" class="form-control"  name="name">
-               </div> 
-             </div> 
-             <div class="col-lg-4 col-sm-12">
-               <div class="form-group">
-                 <input type="email" placeholder="Email*" class="form-control" name="email">
-                </div>
-              </div>
-              <div class="col-lg-4 col-sm-12">
-                <div class="form-group">
-                  <input type="text" placeholder="Phone*" class="form-control" name="phone">
-                </div>
-              </div>
-              <div class="col-md-12">
-                 <div class="form-group">
-                   <textarea class="form-control input-message" placeholder="Comment*" rows="7" name="message"></textarea>
-                 </div>
-              </div>
-              <div class="col-md-12">
-                 <input type="hidden" name="action" value="sendEmail"/>
-                 <button id="submit" name="submit" type="submit" value="Send" class="button red"> Send your message </button>
-               </div>
-              </div>
-          </form>
-          <div id="ajaxloader" style="display:none"><img class="center-block" src="images/ajax-loader.gif" alt=""></div> 
-           </div> 
-       </div>
+      <?php if(have_posts()) : while(have_posts()) : the_post();?>
+         <div class="col-lg-8 col-sm-12">
+            <?php the_content();?>
+          </div> 
+      <?php endwhile;?>  
+      <?php endif;?> 
       <div class="col-lg-4 col-sm-12 mt-lg-0 mt-4">
         <div class="opening-hours gray-bg mt-sm-0">
           <h6>opening hours</h6>

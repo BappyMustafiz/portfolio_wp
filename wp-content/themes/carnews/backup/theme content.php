@@ -748,3 +748,20 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
     location = 'http://localhost/mywordpress/';
 }, false );
 </script>
+
+
+
+// wordpress default customizer customization
+
+/*Remove customize from apperance*/
+function carnews_remove_customize_page(){
+	global $submenu;
+	unset($submenu['themes.php'][6]); //remove customize link
+}
+add_action('admin_menu','carnews_remove_customize_page');
+
+/*adding customizer into menu*/
+function carnews_register_customizer_for_menu_items(){
+	add_menu_page('Customizer title', 'Theme Options', 'customizer.php', '', '', 100);
+}
+add_action('admin_menu','carnews_register_customizer_for_menu_items');

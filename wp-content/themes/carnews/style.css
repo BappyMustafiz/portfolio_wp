@@ -331,12 +331,50 @@ textarea#comment {
 .top-search .top-search-widget h6:before { position: absolute; content: ""; width: 20px; height: 2px; background: #db2d2e; left: 0; bottom: 0px; }
 
 .top-search .top-widget-search { position: relative; }
-.top-search .top-widget-search input { padding-right: 30px; color: #ffffff; height: 45px; border-color: #d12c2d; background: inherit; transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; }
+.top-search .top-widget-search input { padding-right: 30px; color: #ffffff;
+    height: 31px; border-color: #ffffff; background: inherit; transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; }
 .top-search .top-widget-search input:focus { background: transparent; }
-.top-search .top-widget-search button { position: absolute; right: 0px; padding: 8px 12px; font-size: 14px; color: #626262; cursor: pointer; }
+.top-search .top-widget-search button {
+    position: absolute;
+    right: 0px;
+    padding: 2px 8px;
+    font-size: 14px;
+    color: #db2d2e;
+    cursor: pointer;
+}
 .top-search .top-widget-search input:focus { border-color: #db2d2e; }
 
 .product-listing .car-grid {
     margin-top: 0px;
     margin-bottom: 5px;
+}
+
+
+/*shortcode boxes css*/
+.boxes-default{
+    background: #a92e38;
+    color: #ffffff;
+    padding: 10px;
+    width: 25%;
+    text-align: justify;
+    margin-right: 10px;
+    float: left;
+}
+.boxes-blue{
+    background: #043852;
+    color: #ffffff;
+    padding: 10px;
+    width: 25%;
+    text-align: justify;
+    margin-right: 10px;
+    float: left;
+}
+.boxes-aqua{
+    background: #3db882;
+    color: #ffffff;
+    padding: 10px;
+    width: 25%;
+    text-align: justify;
+    margin-right: 10px;
+    float: left;
 }

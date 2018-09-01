@@ -8,22 +8,7 @@
 ?>
 <!--=================================
  banner -->
- <section class="inner-intro bg-1 bg-overlay-black-70">
-  <div class="container">
-     <div class="row text-center intro-title">
-           <div class="col-md-6 text-md-left d-inline-block">
-             <h1 class="text-white"><?php the_title();?></h1>
-           </div>
-           <div class="col-md-6 text-md-right float-right">
-             <ul class="page-breadcrumb">
-                <li><a href="<?php the_permalink();?>"><i class="fa fa-home"></i> <?php the_title();?></a> <!-- <i class="fa fa-angle-double-right"></i> --></li>
-                <!-- <li><a href="#">pages</a> <i class="fa fa-angle-double-right"></i></li>
-                <li><span>page</span> </li> -->
-             </ul>
-           </div>
-     </div>
-  </div>
-</section>
+<?php get_template_part('banner-breadcumb');?>
 
 <!--=================================
  banner -->

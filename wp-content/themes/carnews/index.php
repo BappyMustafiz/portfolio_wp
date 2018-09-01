@@ -1,26 +1,8 @@
 <?php get_header();?>
 <?php get_template_part('slider');?>
-
-<!--  <section class="inner-intro bg-1 bg-overlay-black-70">
-  <div class="container">
-     <div class="row text-center intro-title">
-           <div class="col-md-6 text-md-left d-inline-block">
-             <h1 class="text-white">blog </h1>
-           </div>
-           <div class="col-md-6 text-md-right float-right">
-             <ul class="page-breadcrumb">
-                <li><a href="#"><i class="fa fa-home"></i> Home</a> <i class="fa fa-angle-double-right"></i></li>
-                <li><a href="#">pages</a> <i class="fa fa-angle-double-right"></i></li>
-                <li><span>blog right sidebar </span> </li>
-             </ul>
-           </div>
-     </div>
-  </div>
-</section> -->
-
 <section class="blog blog-right-sidebar page-section-ptb">
   <div class="container">
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-md-12">
          <div class="section-title">
            <span>Read what we say in our blog</span>
@@ -28,7 +10,7 @@
            <div class="separator"></div>
          </div>
       </div>
-    </div>
+    </div> -->
     <div class="row">
      <div class="col-md-8">
       <?php if(have_posts()) : while(have_posts()) : the_post();?>

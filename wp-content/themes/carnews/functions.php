@@ -270,3 +270,214 @@ function slider_meta_save( $post_id ) {
 
 }
 add_action( 'save_post', 'slider_meta_save' );
+
+
+
+
+//all scripts and style load in header 
+// wp enqueue script and style
+function add_theme_scripts() {
+	wp_enqueue_style('bootstrap', get_template_directory_uri().'/css/bootstrap.min.css','','','');
+	wp_enqueue_style('flaticon', get_template_directory_uri().'/css/flaticon.css','','','');
+	wp_enqueue_style('mega_menu', get_template_directory_uri().'/css/mega-menu/mega_menu.css','','','');
+	wp_enqueue_style('awesome', get_template_directory_uri().'/css/font-awesome.min.css','','','');
+	wp_enqueue_style('carousel', get_template_directory_uri().'/css/owl-carousel/owl.carousel.css','','','');
+	wp_enqueue_style('magnific', get_template_directory_uri().'/css/magnific-popup/magnific-popup.css','','','');
+	wp_enqueue_style('settings', get_template_directory_uri().'/revolution/css/settings.css','','','');
+	wp_enqueue_style('responsive', get_template_directory_uri().'/css/responsive.css','','','');
+	wp_enqueue_style('Master CSS', get_template_directory_uri().'/css/style.css','','','');
+	wp_enqueue_style('customizer', get_template_directory_uri().'/css/style-customizer.css','','','');
+	wp_enqueue_style('custom', get_stylesheet_uri());
+
+
+	// this is the right way but for slider it is of
+	// wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery-3.3.1.min.js', array ('jquery'), NULL, true );
+	// wp_enqueue_script( 'popper', get_template_directory_uri() . '/js/popper.js', array ('jquery'), NULL, true );
+	// wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array ('jquery'), NULL, true );
+	// wp_enqueue_script( 'mega_menu_js', get_template_directory_uri() . '/js/mega-menu/mega_menu.js', array ('jquery'), NULL, true );
+	// wp_enqueue_script( 'appear', get_template_directory_uri() . '/js/jquery.appear.js', array ('jquery'), NULL, true );
+	// wp_enqueue_script( 'countTo', get_template_directory_uri() . '/js/counter/jquery.countTo.js', array ('jquery'), NULL, true );
+	// wp_enqueue_script( 'carousel_js', get_template_directory_uri() . '/js/owl-carousel/owl.carousel.min.js', array ('jquery'), NULL, true );
+	// wp_enqueue_script( 'select', get_template_directory_uri() . '/js/select/jquery-select.js', array ('jquery'), NULL, true );
+	// wp_enqueue_script( 'magnific-popup', get_template_directory_uri() . '/js/magnific-popup/jquery.magnific-popup.min.js', array ('jquery'), NULL, true );
+	// wp_enqueue_script( 'revolution', get_template_directory_uri() . '/revolution/js/jquery.themepunch.revolution.min.js', array ('jquery'), NULL, true );
+	// wp_enqueue_script( 'actions', get_template_directory_uri() . '/revolution/js/extensions/revolution.extension.actions.min.js', array ('jquery'), NULL, true );
+	// wp_enqueue_script( 'extension', get_template_directory_uri() . '/revolution/js/extensions/revolution.extension.carousel.min.js', array ('jquery'), NULL, true );
+	// wp_enqueue_script( 'kenburn', get_template_directory_uri() . '/revolution/js/extensions/revolution.extension.kenburn.min.js', array ('jquery'), NULL, true );
+	// wp_enqueue_script( 'layeranimation', get_template_directory_uri() . '/revolution/js/extensions/revolution.extension.layeranimation.min.js', array ('jquery'), NULL, true );
+	// wp_enqueue_script( 'migration', get_template_directory_uri() . '/revolution/js/extensions/revolution.extension.migration.min.js', array ('jquery'), NULL, true );
+	// wp_enqueue_script( 'navigation', get_template_directory_uri() . '/revolution/js/extensions/revolution.extension.navigation.min.js', array ('jquery'), NULL, true );
+	// wp_enqueue_script( 'parallax', get_template_directory_uri() . '/revolution/js/extensions/revolution.extension.parallax.min.js', array ('jquery'), NULL, true );
+	// wp_enqueue_script( 'slideanims', get_template_directory_uri() . '/revolution/js/extensions/revolution.extension.slideanims.min.js', array ('jquery'), NULL, true );
+	// wp_enqueue_script( 'video', get_template_directory_uri() . '/revolution/js/extensions/revolution.extension.video.min.js', array ('jquery'), NULL, true );
+	// wp_enqueue_script( 'style-customizer', get_template_directory_uri() . '/js/style-customizer.js', array ('jquery'), NULL, true );
+	// wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/js/custom.js', array ('jquery'), NULL, true );
+
+	// wp_enqueue_script( 'jquery' );
+	// wp_enqueue_script( 'popper' );
+	// wp_enqueue_script( 'bootstrap-js' );
+	// wp_enqueue_script( 'mega_menu_js' );
+	// wp_enqueue_script( 'appear' );
+	// wp_enqueue_script( 'countTo' );
+	// wp_enqueue_script( 'carousel_js' );
+	// wp_enqueue_script( 'select' );
+	// wp_enqueue_script( 'magnific-popup' );
+	// wp_enqueue_script( 'revolution' );
+	// wp_enqueue_script( 'actions' );
+	// wp_enqueue_script( 'extension' );
+	// wp_enqueue_script( 'kenburn' );
+	// wp_enqueue_script( 'layeranimation' );
+	// wp_enqueue_script( 'migration' );
+	// wp_enqueue_script( 'navigation' );
+	// wp_enqueue_script( 'parallax' );
+	// wp_enqueue_script( 'slideanims' );
+	// wp_enqueue_script( 'video' );
+	// wp_enqueue_script( 'style-customizer' );
+	// wp_enqueue_script( 'custom-js' );
+	// 
+	if (is_singular() && comments_open() && get_option('thread_comments')) {
+	    wp_enqueue_script('comment-reply');
+	  }
+}
+add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
+
+
+// Basic shortcode
+function basic_shortcode($atts, $content = null) {
+   
+	return ('<span style="background:red; padding:20px;">'.$content.'</span>');
+}
+add_shortcode("basic", "basic_shortcode");
+
+//advance shorcode register
+function youtube_shortcode($atts, $content = null) {
+	extract(shortcode_atts(array("video_id"=> '',"width" => '',"height" =>'' ), $atts));
+	?>
+
+		<iframe width="<?= $width;?>" height="<?= $height;?>" src="https://www.youtube.com/embed/<?= $video_id;?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	<?php
+	}
+add_shortcode("youtube", "youtube_shortcode");
+
+//example boxes shortcode
+function boxes_shortcode($atts, $content = null) {
+	extract(shortcode_atts(array("text"=> '',"class" => ''), $atts));
+	?>
+   		<div class="<?= $class;?>">
+   			<?= $text;?>
+   		</div>
+   	<?php
+	}
+add_shortcode("boxes", "boxes_shortcode");
+
+// wordpress default customizer customization
+
+/*Remove customize from apperance*/
+function carnews_remove_customize_page(){
+	global $submenu;
+	unset($submenu['themes.php'][6]); //remove customize link
+}
+add_action('admin_menu','carnews_remove_customize_page');
+
+/*adding customizer into menu*/
+function carnews_register_customizer_for_menu_items(){
+	add_menu_page('Customizer title', 'Theme Options', 'manage_options', 'customize.php', '', '', 100);
+}
+add_action('admin_menu','carnews_register_customizer_for_menu_items');
+
+/*Customizer main*/
+function carnews_customizer($wp_customize){
+	$wp_customize->remove_section('nav');
+	$wp_customize->remove_section('static_front_page');
+	$wp_customize->remove_section('title_tagline');
+	$wp_customize->remove_panel('widgets');
+
+	/* =========================================== */
+	/* ------------ Panel :: Header */
+	/* =========================================== */
+	$wp_customize->add_panel('header_panel', array(
+		'priority' => 9,
+		'capability' => 'edit_theme_options',
+		'theme_support' => '',
+		'title' => __('Header','carnews'),
+		'description' => false,
+	));
+
+	// logo
+	/* ============ Section =============== */
+	$wp_customize->add_section('logo_section', array(
+		'title' => 'Logo',
+		'priority' => 5,
+		'panel' => 'header_panel'
+	));
+
+	/* ============ Settings and control =============== */
+	
+	$wp_customize->add_setting('logo', array(
+		'default' => '',
+		'transport' => 'refresh'
+	));
+
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control($wp_customize, 'logo', array(
+			'section' => 'logo_section',
+			'label' => 'Upload Your Logo'
+		))
+	);
+	// favicon
+	/* ============ Section =============== */
+	$wp_customize->add_section('favicon_section', array(
+		'title' => 'Favicon',
+		'priority' => 6,
+		'panel' => 'header_panel'
+	));
+
+	/* ============ Settings and control =============== */
+	// logo
+	$wp_customize->add_setting('favicon', array(
+		'default' => '',
+		'transport' => 'refresh'
+	));
+
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control($wp_customize, 'favicon', array(
+			'section' => 'favicon_section',
+			'label' => 'Upload Your Favicon'
+		))
+	);
+
+	// header text section
+	/* ============ Section =============== */
+	$wp_customize->add_section('header_text_section', array(
+		'title' => 'Header Text',
+		'priority' => 7,
+		'panel' => 'header_panel'
+	));
+
+	/* ============ Settings and control =============== */
+	// header phone
+	$wp_customize->add_setting('header_phone', array(
+		'default' => '',
+		'transport' => 'postMessage'
+	));
+
+	$wp_customize->add_control('header_phone', array(
+			'section' => 'header_text_section',
+			'label' => 'Header Phone Number',
+			'type' => 'text'
+		));
+	/* ============ Settings and control =============== */
+	// header email
+	$wp_customize->add_setting('header_email', array(
+		'default' => '',
+		'transport' => 'postMessage'
+	));
+
+	$wp_customize->add_control('header_email', array(
+			'section' => 'header_text_section',
+			'label' => 'Header Email Address',
+			'type' => 'text'
+		));
+}
+
+add_action('customize_register','carnews_customizer');

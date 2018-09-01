@@ -12,42 +12,6 @@
 <!-- Favicon -->
 <link rel="shortcut icon" href="<?php echo get_template_directory_uri();?>/images/favicon.ico" />
 
-<!-- bootstrap -->
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/css/bootstrap.min.css" />
-
-<!-- flaticon -->
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/css/flaticon.css" />
-
-<!-- mega menu -->
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/css/mega-menu/mega_menu.css" />
-
-<!-- font awesome -->
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/css/font-awesome.min.css" />
-
-<!-- owl-carousel -->
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/css/owl-carousel/owl.carousel.css" />
-
-<!-- magnific-popup -->
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/css/magnific-popup/magnific-popup.css" />
-
-<!-- revolution -->
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/revolution/css/settings.css" />
-
-<!-- main style -->
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/css/style.css" />
-
-<!-- responsive -->
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/css/responsive.css" />
-
-<!-- Style customizer -->
-<!-- <link rel="stylesheet" href="#" data-style="styles" /> -->
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/css/style-customizer.css" />
-<link rel="stylesheet" href="<?php echo get_stylesheet_uri();?>">
-<?php 
-  if (is_singular() && comments_open() && get_option('thread_comments')) {
-    wp_enqueue_script('comment-reply');
-  }
-?>
 <?php wp_head();?>
 </head>
 
@@ -118,7 +82,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- menu logo -->
         <ul class="menu-logo">
             <li>
-                <a href="<?php echo get_option("siteurl"); ?>"><img id="logo_img" src="<?php echo get_template_directory_uri();?>/images/logo-light.png" alt="logo"> </a>
+                <a href="<?php echo esc_url(home_url('/')); ?>"><img id="logo_img" src="<?php echo get_template_directory_uri();?>/images/logo-light.png" alt="logo"> </a>
             </li>
         </ul>
         <?php

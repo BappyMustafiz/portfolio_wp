@@ -194,16 +194,16 @@
 <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/custom.js"></script>
 
 <script type="text/javascript">
-   (function($){
-  "use strict";
-
+ (function($){
+  "use strict";  
+ 
     var tpj=jQuery;
-      var revapi2;
+     var revapi3;
       tpj(document).ready(function() {
-        if(tpj("#rev_slider_2_1").revolution == undefined){
-          revslider_showDoubleJqueryError("#rev_slider_2_1");
+        if(tpj("#rev_slider_3_1").revolution == undefined){
+          revslider_showDoubleJqueryError("#rev_slider_3_1");
         }else{
-          revapi2 = tpj("#rev_slider_2_1").show().revolution({
+          revapi3 = tpj("#rev_slider_3_1").show().revolution({
             sliderType:"standard",
             sliderLayout:"fullwidth",
             dottedOverlay:"none",
@@ -214,23 +214,29 @@
               mouseScrollNavigation:"off",
                              mouseScrollReverse:"default",
               onHoverStop:"off",
-              bullets: {
+              arrows: {
+                style:"zeus",
                 enable:true,
                 hide_onmobile:false,
-                style:"hermes",
                 hide_onleave:false,
-                direction:"horizontal",
-                h_align:"center",
-                v_align:"bottom",
-                h_offset:0,
-                v_offset:50,
-                                space:10,
-                tmp:''
+                tmp:'<div class="tp-title-wrap">    <div class="tp-arr-imgholder"></div> </div>',
+                left: {
+                  h_align:"left",
+                  v_align:"center",
+                  h_offset:20,
+                                    v_offset:0
+                },
+                right: {
+                  h_align:"right",
+                  v_align:"center",
+                  h_offset:20,
+                                    v_offset:0
+                }
               }
             },
             visibilityLevels:[1240,1024,778,480],
-            gridwidth:1570,
-            gridheight:1000,
+            gridwidth:1270,
+            gridheight:700,
             lazyType:"none",
             shadow:0,
             spinner:"spinner3",
@@ -253,7 +259,7 @@
           });
         }
       }); 
-  })(jQuery);
+ })(jQuery);
 
 </script>
 <?php wp_footer();?>   
