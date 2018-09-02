@@ -10,8 +10,12 @@
 <title><?php bloginfo( 'name' ); ?></title>
 
 <!-- Favicon -->
-<link rel="shortcut icon" href="<?php echo get_template_directory_uri();?>/images/favicon.ico" />
-
+<link rel="shortcut icon" href="<?= get_theme_mod('favicon')?>" />
+<style>
+  .topbar{
+    background: <?= get_theme_mod('header_bg_color');?>!important;
+  }
+</style>
 <?php wp_head();?>
 </head>
 
@@ -42,26 +46,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="topbar">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-4 col-md-12">
-				<div class="topbar-left text-lg-left text-center">
+			<div class="col-lg-3 col-md-12">
+				<div class="topbar-left text-center">
 				   <ul class="list-inline">
-             <li> <i class="fa fa-envelope-o"> </i> support@website.com</li> 
+             <li> <i class="fa fa-envelope-o"> </i> <?= get_theme_mod('header_email')?></li> 
              <!-- <li> <i class="fa fa-clock-o"></i> Mon - Sat 8.00 - 18.00. Sunday CLOSED</li> -->
            </ul>
 				</div>
 			</div>
-			<div class="col-lg-4 col-md-12">
-        <div class="topbar-right text-lg-right text-center">
+			<div class="col-lg-3 col-md-12">
+        <div class="topbar-right text-center">
            <ul class="list-inline">
-             <li> <i class="fa fa-phone"></i> (007) 123 456 7890</li> 
-             <li><a href="#"><i class="fa fa-facebook"></i></a></li>   
-             <li><a href="#"><i class="fa fa-twitter"></i></a></li>   
-             <li><a href="#"><i class="fa fa-instagram"></i></a></li>   
-             <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>   
+             <li> <i class="fa fa-phone"></i> <?= get_theme_mod('header_phone')?></li>   
            </ul>
         </div>
       </div>
-      <div class="col-lg-4 col-md-12">
+      <div class="col-lg-3 col-md-12">
+        <div class="topbar-right text-center">
+           <ul class="list-inline">
+             <li><a href="<?= get_theme_mod('header_facebook')?>"><i class="fa fa-facebook"></i></a></li>   
+             <li><a href="<?= get_theme_mod('header_twitter')?>"><i class="fa fa-twitter"></i></a></li>   
+             <li><a href="<?= get_theme_mod('header_instagram')?>"><i class="fa fa-instagram"></i></a></li>   
+             <li><a href="<?= get_theme_mod('header_youtube')?>"><i class="fa fa-youtube-play"></i></a></li>   
+           </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-12">
 				<?php get_search_form();?>
 			</div>
 		</div>
@@ -82,7 +92,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- menu logo -->
         <ul class="menu-logo">
             <li>
-                <a href="<?php echo esc_url(home_url('/')); ?>"><img id="logo_img" src="<?php echo get_template_directory_uri();?>/images/logo-light.png" alt="logo"> </a>
+                <a href="<?php echo esc_url(home_url('/')); ?>"><img id="logo_img" src="<?= get_theme_mod('logo')?>" alt="logo"> </a>
             </li>
         </ul>
         <?php

@@ -17,7 +17,7 @@
         <div class="blog-entry">
           <div class="blog-entry-image  clearfix">
              <div class="portfolio-item">
-               <?php the_post_thumbnail('', array('class' => 'my-post-thumb'));?>
+               <?php the_post_thumbnail('', array('class' => 'img-fluid'));?>
               </div>
             </div>
           <div class="entry-title">

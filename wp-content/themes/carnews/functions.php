@@ -478,6 +478,120 @@ function carnews_customizer($wp_customize){
 			'label' => 'Header Email Address',
 			'type' => 'text'
 		));
+
+	// header social
+	/* ============ Section =============== */
+	$wp_customize->add_section('header_social_section', array(
+		'title' => 'Header Social',
+		'priority' => 8,
+		'panel' => 'header_panel'
+	));
+	// header facebook
+	$wp_customize->add_setting( 'header_facebook', array(
+	  'capability' => 'edit_theme_options',
+	  'sanitize_callback' => 'themeslug_sanitize_url',
+	) );
+
+	$wp_customize->add_control( 'header_facebook', array(
+	  'type' => 'url',
+	  'section' => 'header_social_section', // Add a default or your own section
+	  'label' => __( 'Facebook URL' ),
+	  'description' => __( 'This is a facebook url input.' ),
+	  'input_attrs' => array(
+	    'placeholder' => __( 'http://www.facebook.com' ),
+	  ),
+	) );
+
+	// header twitter
+	$wp_customize->add_setting( 'header_twitter', array(
+	  'capability' => 'edit_theme_options',
+	  'sanitize_callback' => 'themeslug_sanitize_url',
+	) );
+
+	$wp_customize->add_control( 'header_twitter', array(
+	  'type' => 'url',
+	  'section' => 'header_social_section', // Add a default or your own section
+	  'label' => __( 'Twitter URL' ),
+	  'description' => __( 'This is a twitter url input.' ),
+	  'input_attrs' => array(
+	    'placeholder' => __( 'http://www.twitter.com' ),
+	  ),
+	) );
+
+	// header instagram
+	$wp_customize->add_setting( 'header_instagram', array(
+	  'capability' => 'edit_theme_options',
+	  'sanitize_callback' => 'themeslug_sanitize_url',
+	) );
+
+	$wp_customize->add_control( 'header_instagram', array(
+	  'type' => 'url',
+	  'section' => 'header_social_section', // Add a default or your own section
+	  'label' => __( 'Instagram URL' ),
+	  'description' => __( 'This is a instagram url input.' ),
+	  'input_attrs' => array(
+	    'placeholder' => __( 'http://www.instagram.com' ),
+	  ),
+	) );
+
+	// header youtube
+	$wp_customize->add_setting( 'header_youtube', array(
+	  'capability' => 'edit_theme_options',
+	  'sanitize_callback' => 'themeslug_sanitize_url',
+	) );
+
+	$wp_customize->add_control( 'header_youtube', array(
+	  'type' => 'url',
+	  'section' => 'header_social_section', // Add a default or your own section
+	  'label' => __( 'Youtube URL' ),
+	  'description' => __( 'This is a youtube url input.' ),
+	  'input_attrs' => array(
+	    'placeholder' => __( 'http://www.youtube.com' ),
+	  ),
+	) );
+
+	function themeslug_sanitize_url( $url ) {
+	  return esc_url_raw( $url );
+	}
+
+	/* =========================================== */
+	/* ------------Color Panel :: Header */
+	/* =========================================== */
+	$wp_customize->add_panel('color_panel', array(
+		'priority' => 9,
+		'capability' => 'edit_theme_options',
+		'theme_support' => '',
+		'title' => __('Color','carnews'),
+		'description' => false,
+	));
+	// Header color
+	/* ============ Section =============== */
+	$wp_customize->add_section('color_section', array(
+		'title' => 'Header Color',
+		'priority' => 8,
+		'panel' => 'color_panel'
+	));
+
+	/* ============ Settings and control =============== */
+	// logo
+	$wp_customize->add_setting('header_bg_color', array(
+		'default' => '#ffffff',
+		'transport' => 'postMessage'
+	));
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control($wp_customize, 'header_bg_color', array(
+			'section' => 'color_section',
+			'label' => 'Header Background Color'
+		))
+	);
 }
 
 add_action('customize_register','carnews_customizer');
+
+
+/*Removing live refresh style for customizer */
+function carnews_customizer_scripts(){
+	wp_enqueue_script('customizer-scripts', get_template_directory_uri().'/inc/customizer/theme-customize.js', array('jquery', 'customize-preview'), '', true);
+}
+add_action('customize_preview_init', 'carnews_customizer_scripts');
