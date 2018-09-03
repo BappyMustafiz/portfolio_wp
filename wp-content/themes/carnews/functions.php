@@ -595,3 +595,16 @@ function carnews_customizer_scripts(){
 	wp_enqueue_script('customizer-scripts', get_template_directory_uri().'/inc/customizer/theme-customize.js', array('jquery', 'customize-preview'), '', true);
 }
 add_action('customize_preview_init', 'carnews_customizer_scripts');
+
+
+// word count function
+function word_count($string, $limit){
+	$word = explode(' ', $string);
+	$word = array_slice($word, 0, $limit);
+	$word = implode(' ', $word);
+	return ($word);
+}
+
+// Redux framework
+require_once(get_template_directory().'/redux-framework/ReduxCore/framework.php');
+require_once(get_template_directory().'/redux-framework/sample/config.php');

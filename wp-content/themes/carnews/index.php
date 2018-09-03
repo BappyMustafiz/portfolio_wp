@@ -1,5 +1,18 @@
 <?php get_header();?>
-<?php get_template_part('slider');?>
+<section class="inner-intro bg-1 bg-overlay-black-70">
+  <div class="container">
+     <div class="row text-center intro-title">
+           <div class="col-md-6 text-md-left d-inline-block">
+             <h1 class="text-white">Blog </h1>
+           </div>
+           <div class="col-md-6 text-md-right float-right">
+             <ul class="page-breadcrumb">
+                <li><a href="<?php echo esc_url(home_url('/')); ?>"><i class="fa fa-home"></i> Home</a></li>
+             </ul>
+           </div>
+     </div>
+  </div>
+</section>
 <section class="blog blog-right-sidebar page-section-ptb">
   <div class="container">
     <!-- <div class="row">
@@ -31,7 +44,14 @@
             </ul>
           </div>
           <div class="entry-content">
-            <p><?php the_excerpt();?></p>
+            <p><?= word_count(get_the_excerpt(),50);?></p>
+          </div>
+          <div class="entry-content">
+            <?php
+              $note = get_post_meta($post->ID, 'Note', true);
+              if(!empty($note)){ ?>
+                <p class="text-danger">Note: <?= $note;?></p>
+              <?php } ?>
           </div>
            <div class="entry-share clearfix">
              <a class="button red float-left" href="<?php the_permalink();?>"> Read More </a>
