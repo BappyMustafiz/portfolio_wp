@@ -277,14 +277,14 @@
      */
 
     // -> START Basic Fields
-    // creating section
+    // creating header section
     Redux::setSection($opt_name, array(
         'title' =>__('Header', 'redux_carnews'),
         'id' =>'header',
         'desc' =>__('This is header area', 'redux_carnews'),
         'icon' =>__('el el-check', 'redux_carnews')
     ));
-    // creating sub section
+    // creating header sub section
     Redux::setSection($opt_name, array(
         'title' =>__('Logo', 'redux_carnews'),
         'id' =>'logo-gallery',
@@ -302,6 +302,16 @@
                 'default' => array(
                     'url' => get_template_directory_uri().'/images/logo-3.png'
                 )
+            ),
+            array(
+                'id' => 'opt-enable-disable',
+                'type' => 'switch',
+                'title' => __('Enable or Disable site logo','redux_carnews'),
+                'subtitle' => __('You can enable or disable your logo','redux_carnews'),
+                'desc' => __('This is enable or disable logo area','redux_carnews'),
+                'default' => 1,
+                'on' =>'Enable',
+                'off' =>'Disable',
             ),
         )
     ));
@@ -388,6 +398,155 @@
                 'title' => __('Set dribble link','redux_carnews'),
                 'subtitle' => __('You can set topbar dribble link','redux_carnews'),
                 'desc' => __('This is topbar dribble link','redux_carnews')
+            ),
+        )
+    ));
+    // creating slider section
+    Redux::setSection($opt_name, array(
+        'title' =>__('Slider', 'redux_carnews'),
+        'id' =>'slider',
+        'desc' =>__('This is slider area', 'redux_carnews'),
+        'icon' =>__('el el-picture', 'redux_carnews')
+    ));
+
+    Redux::setSection( $opt_name, array(
+        'title'      => __( 'Main slider', 'redux_carnews' ),
+        'id'         => 'main-slider',
+        'subsection' => true,
+        'fields'     => array(
+            array(
+                'id'          => 'opt-slides',
+                'type'        => 'slides',
+                'title'       => __( 'Slider Options', 'redux_carnews' ),
+                'subtitle'    => __( 'Unlimited slides with drag and drop sortings.', 'redux_carnews' ),
+                'desc'        => __( 'This area is for slider.', 'redux_carnews' ),
+                'placeholder' => array(
+                    'title'       => __( 'This is a title', 'redux_carnews' ),
+                    'description' => __( 'Description Here', 'redux_carnews' ),
+                    'url'         => __( 'Give us a link!', 'redux_carnews' ),
+                ),
+            ),
+        )
+    ) );
+
+    // creating footer section
+    Redux::setSection($opt_name, array(
+        'title' =>__('Footer', 'redux_carnews'),
+        'id' =>'footer',
+        'desc' =>__('This is footer area', 'redux_carnews'),
+        'icon' =>__('el el-check', 'redux_carnews')
+    ));
+    // creating footer sub section
+    Redux::setSection($opt_name, array(
+        'title' =>__('Copyright', 'redux_carnews'),
+        'id' =>'footer-copyright',
+        'subsection' =>true,
+        'desc' =>__('This is copyright area', 'redux_carnews'),
+        'icon' =>__('el el-pencil', 'redux_carnews'),
+        'fields' => array(
+            array(
+                'id' => 'opt-copyright',
+                'type' => 'text',
+                'title' => __('Set copyright','redux_carnews'),
+                'subtitle' => __('You can set copyright','redux_carnews'),
+                'desc' => __('This is footer copyright description area','redux_carnews'),
+                'default' => 'Set copyright details'
+            ),
+            array(
+                'id' => 'opt-copyright-developer-url',
+                'type' => 'text',
+                'title' => __('Set developer url','redux_carnews'),
+                'subtitle' => __('You can set developer url','redux_carnews'),
+                'desc' => __('This is footer copyright developer url area','redux_carnews'),
+                'default' => 'Set developer url'
+            ),
+            array(
+                'id' => 'opt-copyright-developer-name',
+                'type' => 'text',
+                'title' => __('Set developer name','redux_carnews'),
+                'subtitle' => __('You can set developer name','redux_carnews'),
+                'desc' => __('This is footer copyright developer name area','redux_carnews'),
+                'default' => 'Set developer name'
+            ),
+            array(
+                'id' => 'opt-copyright-developer-link-color',
+                'type' => 'link_color',
+                'title' => __('Set Links Color Option','redux_carnews'),
+                'subtitle' => __('You can set links color option','redux_carnews'),
+                'desc' => __('This is footer link color option area','redux_carnews'),
+                'default'  => array(
+                    'regular' => '#242526',
+                    'hover'   => '#ec0710',
+                    'active'  => '#000000',
+                )
+            ),
+        )
+    ));
+    Redux::setSection($opt_name, array(
+        'title' =>__('Footer background', 'redux_carnews'),
+        'id' =>'footer-background',
+        'subsection' =>true,
+        'desc' =>__('This is footer background area', 'redux_carnews'),
+        'icon' =>__('el el-path', 'redux_carnews'),
+        'fields' => array(
+            array(
+                'id' => 'footer-background',
+                'type' => 'color',
+                'title' => __('Set footer background','redux_carnews'),
+                'subtitle' => __('You can set footer background','redux_carnews'),
+                'desc' => __('This is footer background area','redux_carnews'),
+                'default' => '#dd3333',
+                'validate' => 'color'
+            ),
+        )
+    ));
+
+    Redux::setSection($opt_name, array(
+        'title' =>__('Footer switch button', 'redux_carnews'),
+        'id' =>'footer-switch',
+        'subsection' =>true,
+        'desc' =>__('This is footer switch button area', 'redux_carnews'),
+        'icon' =>__('el el-forward', 'redux_carnews'),
+        'fields' => array(
+            array(
+                'id' => 'footer-switch-button',
+                'type' => 'switch',
+                'title' => __('Set footer switch button','redux_carnews'),
+                'subtitle' => __('You can set footer switch button','redux_carnews'),
+                'desc' => __('This is footer switch button area','redux_carnews'),
+                'default' => true
+            ),
+        )
+    ));
+
+    // creating sortable social network
+    Redux::setSection($opt_name, array(
+        'title' =>__('Social Network', 'redux_carnews'),
+        'id' =>'footer',
+        'desc' =>__('This is social network area', 'redux_carnews'),
+        'icon' =>__('el el-check', 'redux_carnews')
+    ));
+    Redux::setSection($opt_name, array(
+        'title' =>__('Social Network', 'redux_carnews'),
+        'id' =>'footer-social-network',
+        'subsection' =>true,
+        'desc' =>__('This is social network area', 'redux_carnews'),
+        'icon' =>__('el el-forward', 'redux_carnews'),
+        'fields' => array(
+            array(
+                'id' => 'opt-social-network',
+                'type' => 'sortable',
+                'title' => __('Enter social network url','redux_carnews'),
+                'subtitle' => __('You can set social network','redux_carnews'),
+                'desc' => __('This is social network area','redux_carnews'),
+                'label' => true,
+                'options'=>array(
+                    'Facebook'=>'Enter your facebook url',
+                    'Twitter'=>'Enter your twitter url',
+                    'Google'=>'Enter your google url',
+                    'Pintrest'=>'Enter your pintrest url',
+                    'Dribble'=>'Enter your dribble url',
+                ),
             ),
         )
     ));

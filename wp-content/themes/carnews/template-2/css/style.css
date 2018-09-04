@@ -7195,12 +7195,17 @@ img{
 }
 
 .footer-bottom .copyright-text a{
-	color: #ffffff;
+	color: #ece940;
 	display: inline-block;
 }
 
 .footer-bottom .copyright-text a:hover{
+	color: #080606;
+	cursor: pointer;
 	text-decoration: underline;
+}
+.footer-bottom .copyright-text a:active{
+	color:#f30c0c;
 }
 
 /***

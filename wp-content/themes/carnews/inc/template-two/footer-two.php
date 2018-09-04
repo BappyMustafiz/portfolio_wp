@@ -1,6 +1,8 @@
-
+<?php global $versatile;?>
     <!-- Main Footer -->
     <footer class="main-footer" style="background-image: url(<?php echo get_template_directory_uri(); ?>/template-2/images/background/4.jpg);">
+        <!-- on or off footer -->
+        <?php if($versatile['footer-switch-button'] == 1):?>
         <div class="auto-container">
         
             <!--Widgets Section-->
@@ -17,13 +19,25 @@
                             <div class="widget-content">
                                 <div class="text">How to pursue pleasure rationally thats encounter consequences that extremely painful. Nor again is there anyones who loves or pursues or ut desires obtains pain of itself, because.</div>
                                 <h4>Follow Us:</h4>
+
                                 <ul class="social-icon">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                                    <?php if(!empty($versatile['opt-social-network']['Facebook'])):?>
+                                    <li><a target="_blank" href="<?= $versatile['opt-social-network']['Facebook'];?>"><span class="fab fa-facebook-f"></span></a></li>
+                                    <?php endif;?>
+                                    <?php if(!empty($versatile['opt-social-network']['Twitter'])):?>
+                                    <li><a target="_blank" href="<?= $versatile['opt-social-network']['Twitter'];?>"><span class="fab fa-twitter"></span></a></li>
+                                    <?php endif;?>
+                                    <?php if(!empty($versatile['opt-social-network']['Google'])):?>
+                                    <li><a target="_blank" href="<?= $versatile['opt-social-network']['Google'];?>"><span class="fab fa-google-plus-g"></span></a></li>
+                                    <?php endif;?>
+                                    <?php if(!empty($versatile['opt-social-network']['Pintrest'])):?>
+                                    <li><a target="_blank" href="<?= $versatile['opt-social-network']['Pintrest'];?>"><span class="fab fa-pinterest"></span></a></li>
+                                    <?php endif;?>
+                                    <?php if(!empty($versatile['opt-social-network']['Dribble'])):?>
+                                    <li><a target="_blank" href="<?= $versatile['opt-social-network']['Dribble'];?>"><span class="fab fa-dribbble"></span></a></li>
+                                    <?php endif;?>
                                 </ul>
+                                
                             </div>
                         </div>
                     </div>
@@ -103,12 +117,12 @@
                 </div>
             </div>
         </div>
-        
+        <?php endif;?>   
         <!--Footer Bottom-->
          <div class="footer-bottom">
             <div class="auto-container">
                 <div class="copyright-text">
-                    <p>Copyrights © 2018 All Rights Reserved. by <a href="#"> Expert Themes</a></p>
+                    <p><?= $versatile['opt-copyright'];?> <a target="_blank" href="<?= $versatile['opt-copyright-developer-url'];?>"> <?= $versatile['opt-copyright-developer-name'];?></a></p>
                 </div>
             </div>
         </div>

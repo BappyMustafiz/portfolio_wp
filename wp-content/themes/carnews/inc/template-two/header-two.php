@@ -20,14 +20,31 @@
 
 <!--Favicon-->
 <link rel="shortcut icon" href="<?= $versatile['opt-favicon']['url'];?>" />
-<!-- <link rel="shortcut icon" href="<?php //echo get_template_directory_uri(); ?>/template-2/images/favicon.png" type="image/x-icon">
-<link rel="icon" href="<?php //echo get_template_directory_uri(); ?>/template-2/images/favicon.png" type="image/x-icon"> -->
 
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+
+<!-- dynamic footer color by redux -->
+<style>
+    .footer-bottom{
+        background-color: <?= $versatile['footer-background'];?> !important;
+    }
+    .footer-bottom .copyright-text a{
+        color: <?= $versatile['opt-copyright-developer-link-color']['regular'];?>!important;
+    }
+    .footer-bottom .copyright-text a:hover{
+        color: <?= $versatile['opt-copyright-developer-link-color']['hover'];?>!important;
+    }
+    .footer-bottom .copyright-text a:active{
+        color: <?= $versatile['opt-copyright-developer-link-color']['active'];?>!important;
+    }
+    
+</style>
+
+
 </head>
 
 <body>
@@ -79,12 +96,13 @@
                             </div>
                         </div>
                     </div>
-
+                    <!-- enable or disable logo -->
+                    <?php if($versatile['opt-enable-disable'] == 1):?>
                     <div class="logo-outer">
                         <div class="logo"><a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?= $versatile['opt-logo']['url'];?>" alt="" title=""></a>
                         </div>
                     </div>
-
+                    <?php endif;?>
                     <!-- End Header Top -->     
                     <div class="nav-outer clearfix">
                         <!-- Main Menu -->
